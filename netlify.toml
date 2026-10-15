@@ -41,5 +41,5 @@ headers.values
 [[
 edge_functions
 ]]
-path = "/proxy/*"
-function = "proxy"
+  path = "/proxy/*"
+  function = "proxy"
