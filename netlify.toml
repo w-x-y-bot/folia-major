@@ -21,3 +21,7 @@
   for = "*.svg"
   [headers.values]
     Content-Type = "image/svg+xml"
+
+[[edge_functions]]
+path = "/proxy/*"
+function = "proxy"
