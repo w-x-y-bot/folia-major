@@ -1,45 +1,23 @@
-[
-build
-]
+[build]
   command = "npm run build"
   publish = "dist"
 
-[[
-redirects
-]]
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
-[[
-headers
-]]
-  for = "*.js"  
- [
-headers.values
-]
+[[headers]]
+  for = "*.js"
+  [headers.values]
     Content-Type = "application/javascript; charset=utf-8"
 
-[[
-headers
-]]
+[[headers]]
   for = "*.wasm"
-  [
-headers.values
-]
+  [headers.values]
     Content-Type = "application/wasm"
 
-[[
-headers
-]]
+[[headers]]
   for = "*.svg"
-  [
-headers.values
-]
+  [headers.values]
     Content-Type = "image/svg+xml"
-
-[[
-edge_functions
-]]
-  path = "/proxy/*"
-  function = "proxy"
